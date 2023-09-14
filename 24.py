@@ -54,5 +54,13 @@ def calc_24(numlist_4):
     return form_24
 
 
-for a in calc_24([3, 7, 9, 8]):
-    print(a)
+while True:
+    nums = input("请输入4个数字，用空格分隔，退出请输入"q":")
+    if nums == "q":
+        break
+    else:
+        nums = [int(i) for i in nums.split()]
+        print("所有算式组合如下:")
+        for form in calc_24(nums):
+            print(form + "=24")
+    
